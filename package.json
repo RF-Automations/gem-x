@@ -2,12 +2,16 @@
   "name": "gem-x",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "dev": "node --watch ./src/app.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Code First",
   "license": "ISC",
-  "type": "commonjs"
+  "type": "module",
+  "dependencies": {
+    "@google/genai": "^1.4.0",
+    "dotenv": "^16.5.0"
+  }
 }
