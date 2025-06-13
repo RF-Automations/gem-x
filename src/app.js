@@ -126,10 +126,7 @@ async function main() {
     contents: messages,
     config: {
       responseMimeType: "application/json",
-      responseSchema: {
-        type: Type.OBJECT,
-        properties
-      },
+      responseSchema: properties,
     },
   });
 
@@ -146,7 +143,7 @@ async function main() {
   }
 
   if (parsedResponse.status && parsedResponse.status === "ACTION") {
-    toolBox[parsedResponse.tool]([...parsedResponse.parms]);
+    toolBox[parsedResponse.tool]([...parsedResponse.params]);
   }
 
   if (parsedResponse.status && parsedResponse.status === "OUTPUT") {
