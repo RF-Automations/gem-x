@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "dev": "node --watch ./src/app.js"
+    "dev": "tsc &&  node --watch dist/src/app.js"
   },
   "keywords": [],
   "author": "Code First",
@@ -13,5 +13,10 @@
   "dependencies": {
     "@google/genai": "^1.4.0",
     "dotenv": "^16.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
   }
 }
